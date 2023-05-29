@@ -1,1 +1,8 @@
-{}
+{{- $githubEmail := promptStringOnce . "githubEmail" "Enter your GitHub email (You can find a private one at: https://github.com/settings/emails)" -}}
+
+{
+  "data": {
+    "githubEmail": "{{ $githubEmail }}"
+  },
+  "progress": true
+}
