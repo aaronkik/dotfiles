@@ -1,6 +1,8 @@
 alias ls=exa
 alias lsa='exa -lah'
 
+alias rm=trash
+
 alias gco='git checkout'
 alias gs='git status'
 alias ga='git add'
