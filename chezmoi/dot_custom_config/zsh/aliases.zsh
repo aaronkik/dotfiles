@@ -1,6 +1,7 @@
 alias ls=exa
 alias lsa='exa -lah'
-
+alias h=history
+alias jj='pbpaste | jsonpp | pbcopy'
 alias rm=trash
 
 alias gco='git checkout'
