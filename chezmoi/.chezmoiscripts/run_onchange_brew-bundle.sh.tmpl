@@ -1,0 +1,18 @@
+{{- if (eq .chezmoi.os "darwin") -}}
+#!/bin/sh
+
+# This file checks the Brewfile template for changes depending on the checksum and runs 'brew bundle' if the checksums do not match.
+# Brewfile hash: {{ include "Brewfile.tmpl" | sha256sum }}
+
+if ! command -v brew >/dev/null 2>&1; then
+  echo "\033[33mHomebrew is not installed! Installing...\033[m"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+echo "\033[32mBrewfile template updated!\033[m"
+
+echo "\033[33mRunning 'brew bundle'\033[m"
+
+brew bundle --file=$HOME/Brewfile
+
+{{- end -}}
