@@ -13,7 +13,14 @@ brew "jq"
 cask "figma"
 cask "firefox"
 # cask "google-chrome"
+cask "http-toolkit"
 cask "kap"
+cask "spotify"
+
+# Cask - Apps - Personal Computer
+{{ if eq .isPersonalComputer true }}
+cask "transmission"
+{{ end }}
 
 # Cask - Fonts
 cask "font-fira-code"
@@ -40,4 +47,4 @@ vscode "bradlc.vscode-tailwindcss"
 vscode "hediet.vscode-drawio"
 vscode "GitHub.copilot"
 vscode "ZixuanChen.vitest-explorer"
-{{- end }}
+{{- end -}}
