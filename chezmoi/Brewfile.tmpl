@@ -1,3 +1,4 @@
+{{- if eq .chezmoi.os "darwin" -}}
 tap "homebrew/bundle"
 tap "homebrew/core"
 tap "homebrew/cask"
@@ -47,4 +48,6 @@ vscode "bradlc.vscode-tailwindcss"
 vscode "hediet.vscode-drawio"
 vscode "GitHub.copilot"
 vscode "ZixuanChen.vitest-explorer"
+{{- end -}}
+
 {{- end -}}
