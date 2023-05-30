@@ -1,6 +1,7 @@
-alias ls=exa
-alias lsa='exa -lah'
-alias h=history
+alias c=clear
+alias l=exa
+alias ls='exa -lah'
+alias h='history -E'
 alias jj='pbpaste | jsonpp | pbcopy'
 alias rm=trash
 alias uuid='uuidgen | tr "[:upper:]" "[:lower:]" | pbcopy'

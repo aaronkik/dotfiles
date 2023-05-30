@@ -9,6 +9,7 @@ export PATH="$VOLTA_HOME/bin:$PATH"
 source "$HOME/.custom_config/aliases.sh"
 source "$HOME/.custom_config/fig.sh"
 source "$HOME/.custom_config/functions.sh"
+source "$HOME/.custom_config/history.zsh"
 
 source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
