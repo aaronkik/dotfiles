@@ -6,7 +6,9 @@ export EDITOR="code --wait"
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 
-source "$HOME/.custom_config/zsh/aliases.zsh"
+source "$HOME/.custom_config/aliases.sh"
+source "$HOME/.custom_config/fig.sh"
+source "$HOME/.custom_config/functions.sh"
 
 source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 

@@ -1,8 +1,12 @@
 {{- if eq .chezmoi.os "darwin" -}}
 #!/bin/zsh
 
-# This file checks the dot_custom_config/zsh folder for changes
-# zsh/aliases hash: {{ include "dot_custom_config/zsh/aliases.zsh" | sha256sum }}
+# This file checks various files in the dot_custom_config directory and updates
+#
+# aliases       hash: {{ include "dot_custom_config/aliases.sh" | sha256sum }}
+# fig            hash: {{ include "dot_custom_config/fig.sh" | sha256sum }}
+# functions     hash: {{ include "dot_custom_config/functions.sh" | sha256sum }}
+
 
 echo "\033[32mzsh custom_config files updated!\033[m"
 
