@@ -15,16 +15,23 @@ brew "trash"
 brew "zsh-syntax-highlighting"
 
 # Cask - Apps
+cask "exifcleaner"
 cask "fig"
 cask "figma"
 cask "firefox"
-# cask "google-chrome"
+cask "google-chrome"
 cask "http-toolkit"
 cask "kap"
+cask "logi-options-plus"
+cask "miro"
+cask "notion"
+cask "protonvpn"
 cask "spotify"
 
 # Cask - Apps - Personal Computer
 {{ if eq .isPersonalComputer true }}
+cask "bitwarden"
+cask "steam"
 cask "transmission"
 {{ end }}
 
