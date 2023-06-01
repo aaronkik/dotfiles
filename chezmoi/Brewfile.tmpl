@@ -4,6 +4,7 @@ tap "homebrew/core"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 
+brew "awscli"
 brew "chezmoi"
 brew "exa"
 brew "gh"
@@ -15,6 +16,10 @@ brew "starship"
 brew "tmux"
 brew "trash"
 brew "zsh-syntax-highlighting"
+
+{{- if eq .isWorkComputer true }}
+brew "python@3.11"
+{{ end }}
 
 # Cask - Apps
 cask "anki"
@@ -43,10 +48,12 @@ cask "transmission"
 cask "font-fira-code"
 cask "font-fira-code-nerd-font"
 
+vscode "andys8.jest-snippets"
 vscode "CoenraadS.disableligatures"
 vscode "DavidAnson.vscode-markdownlint"
 vscode "dbaeumer.vscode-eslint"
 vscode "dsznajder.es7-react-js-snippets"
+vscode "eamodio.gitlens"
 vscode "Equinusocio.vsc-community-material-theme"
 vscode "Equinusocio.vsc-material-theme"
 vscode "equinusocio.vsc-material-theme-icons"
@@ -58,6 +65,7 @@ vscode "mikestead.dotenv"
 vscode "naumovs.color-highlight"
 vscode "VisualStudioExptTeam.intellicode-api-usage-examples"
 vscode "VisualStudioExptTeam.vscodeintellicode"
+vscode "yzhang.markdown-all-in-one"
 
 {{- if eq .isPersonalComputer true }}
 vscode "bradlc.vscode-tailwindcss"
@@ -65,5 +73,10 @@ vscode "hediet.vscode-drawio"
 vscode "GitHub.copilot"
 vscode "ZixuanChen.vitest-explorer"
 {{- end -}}
+
+{{- if eq .isWorkComputer true }}
+vscode "ms-vsliveshare.vsliveshare"
+vscode "vincent-ledu.adr-tools"
+{{ end }}
 
 {{- end -}}
