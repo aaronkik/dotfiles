@@ -103,7 +103,7 @@ style = 'bold purple'
 symbol = ' '
 
 [memory_usage]
-disabled = false
+disabled = true
 format = '[$symbol$ram( | $swap)]($style) '
 symbol = '󰍛 '
 style = 'dimmed white'
