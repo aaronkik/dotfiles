@@ -34,12 +34,10 @@ gbdr () {
 }
 
 gcm () {
-    git commit -m "$@"
+    git commit -m "$*"
 }
 
 gcmp () {
-    git commit -m "$@"
+    git commit -m "$*"
     git push
 }
-
-################################################################################
