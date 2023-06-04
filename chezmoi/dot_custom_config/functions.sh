@@ -13,7 +13,7 @@ source_if_exists () {
 # GIT FUNCTIONS ################################################################
 ################################################################################
 
-gb() {
+gb () {
     git branch "$1"
     git checkout "$1"
 }
@@ -31,4 +31,13 @@ gbd () {
 gbdr () {
     git branch -D "$1"
     git push origin --delete "$1"
+}
+
+gcm () {
+    git commit -m "$@"
+}
+
+gcmp () {
+    git commit -m "$@"
+    git push
 }
