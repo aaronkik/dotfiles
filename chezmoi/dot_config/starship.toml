@@ -86,9 +86,9 @@ $line_break\
 $character"""
 
 [aws]
-format = '[$symbol$profile($region)]($style) '
+format = '[$symbol$profile ($region)]($style) '
 symbol = '󰸏 '
-style = 'bold yellow'
+style = 'yellow'
 
 [cmd_duration]
 format = '[⌛️$duration ]($style)'
