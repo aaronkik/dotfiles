@@ -1,0 +1,13 @@
+{{- if eq .chezmoi.os "darwin" -}}
+#!/bin/sh
+
+# This file checks for a change in mac_settings.sh
+#
+# mac_settings  hash: {{ include "dot_custom_config/mac_settings.sh" | sha256sum }}
+
+
+echo "\033[32mmac_settings file updated!\033[m"
+
+source "$HOME/.custom_config/mac_settings.sh"
+
+{{- end -}}

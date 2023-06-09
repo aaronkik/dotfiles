@@ -9,8 +9,8 @@ osascript -e 'tell application "System Preferences" to quit'
 set_terminal_font_and_size='
 tell application "Terminal"
     set current settings of front window to settings set "Basic"
-    set font name of front window to "FiraCode Nerd Font Mono Ret"
-    set font size of front window to 14
+    set font name of front window to "FiraCode Nerd Font Retina"
+    set font size of front window to 18
 end tell
 '
 
