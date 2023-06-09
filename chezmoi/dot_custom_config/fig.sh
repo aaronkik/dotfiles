@@ -1,3 +1,5 @@
+#!/bin/sh
+
 fig settings autocomplete.fontFamily "FiraCode Nerd Font Retina"
 fig settings autocomplete.fontSize 14
 fig settings autocomplete.height 200
