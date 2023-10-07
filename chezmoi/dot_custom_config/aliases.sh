@@ -5,7 +5,7 @@ alias h='history -E'
 alias jj='pbpaste | jsonpp | pbcopy'
 alias rm=trash
 alias s="source ~/.zshrc"
-alias uuid='uuidgen | tr "[:upper:]" "[:lower:]" | pbcopy'
+alias uuid='uuidgen | tr -d "\n" | tr "[:upper:]" "[:lower:]" | pbcopy'
 
 alias gco='git checkout'
 alias gs='git status'
