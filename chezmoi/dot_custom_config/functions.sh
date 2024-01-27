@@ -103,17 +103,8 @@ pretty_git_branch_sorted() {
 pretty_git_format() {
     # Replace (2 years ago) with (2 years)
     sed -Ee 's/(^[^)]*) ago\)/\1)/' |
-    # Replace (2 years, 5 months) with (2 years)
-    sed -Ee 's/(^[^)]*), [[:digit:]]+ .*months?\)/\1)/' |
-    # Shorten time
-    sed -Ee 's/ seconds?\)/s\)/' |
-    sed -Ee 's/ minutes?\)/m\)/' |
-    sed -Ee 's/ hours?\)/h\)/' |
-    sed -Ee 's/ days?\)/d\)/' |
-    sed -Ee 's/ weeks?\)/w\)/' |
-    sed -Ee 's/ months?\)/M\)/' |
     # Shorten names
-    sed -Ee 's/<Andrew Burgess>/<me>/' |
+    sed -Ee 's/<Aaron Kikabhai>/<me>/' |
     sed -Ee 's/<([^ >]+) [^>]*>/<\1>/' |
     # Line columns up based on } delimiter
     column -s '}' -t
