@@ -1,6 +1,7 @@
 #!/bin/sh
 
 cw settings autocomplete.fontFamily "FiraCode Nerd Font Retina"
+cw settings autocomplete.firstTokenCompletion true
 cw settings autocomplete.fontSize 14
 cw settings autocomplete.height 200
 cw settings autocomplete.width 450
