@@ -45,7 +45,6 @@ cask "webstorm"
 
 # Cask - Apps - Personal Computer
 {{ if eq .isPersonalComputer true }}
-cask "bitwarden"
 cask "steam"
 cask "transmission"
 {{ end }}
@@ -74,7 +73,6 @@ vscode "yzhang.markdown-all-in-one"
 
 {{- if eq .isPersonalComputer true }}
 vscode "bradlc.vscode-tailwindcss"
-vscode "hediet.vscode-drawio"
 vscode "GitHub.copilot"
 vscode "GitHub.copilot-chat"
 vscode "ZixuanChen.vitest-explorer"
@@ -84,7 +82,6 @@ vscode "ZixuanChen.vitest-explorer"
 vscode "42crunch.vscode-openapi"
 vscode "firsttris.vscode-jest-runner"
 vscode "ms-vsliveshare.vsliveshare"
-vscode "vincent-ledu.adr-tools"
 {{ end }}
 
 {{- end -}}
