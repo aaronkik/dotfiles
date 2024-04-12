@@ -1,7 +1,9 @@
-[user]
-	email = {{ .githubEmail }}
-	name = {{ .githubName }}
+[commit]
+    gpgsign = true
 [credential "https://github.com"]
 	helper = !/opt/homebrew/bin/gh auth git-credential
 [credential "https://gist.github.com"]
 	helper = !/opt/homebrew/bin/gh auth git-credential
+[user]
+	email = {{ .githubEmail }}
+	name = {{ .githubName }}

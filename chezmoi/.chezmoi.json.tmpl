@@ -1,5 +1,6 @@
 {{- $githubEmail := promptStringOnce . "githubEmail" "Enter your GitHub email (You can find a private one at: https://github.com/settings/emails)" -}}
 {{- $githubName := promptStringOnce . "githubName" "Enter the name you wish to use on GitHub" -}}
+{{- $publicGpgKey := promptStringOnce . "publicGpgKey" "Enter the your public GPG key for commit signing" -}}
 
 {{- $isWorkComputer := promptBoolOnce . "isWorkComputer" "Is this a work computer" -}}
 {{- $isPersonalComputer := promptBoolOnce . "isPersonalComputer" "Is this a personal computer" -}}
@@ -9,7 +10,8 @@
     "githubName": "{{ $githubName }}",
     "githubEmail": "{{ $githubEmail }}",
     "isPersonalComputer": {{ $isPersonalComputer }},
-    "isWorkComputer": {{ $isWorkComputer }}
+    "isWorkComputer": {{ $isWorkComputer }},
+    "publicGpgKey": {{ $publicGpgKey }}
   },
   "progress": true
 }
