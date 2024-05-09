@@ -24,8 +24,8 @@ brew "python@3.9"
 {{ end }}
 
 # Cask - Apps
+cask "amazon-q"
 cask "anki"
-cask "codewhisperer"
 cask "cleanshot"
 cask "exifcleaner"
 cask "figma"
@@ -75,7 +75,6 @@ vscode "VisualStudioExptTeam.vscodeintellicode"
 vscode "yzhang.markdown-all-in-one"
 
 {{- if eq .isWorkComputer true }}
-vscode "42crunch.vscode-openapi"
 vscode "firsttris.vscode-jest-runner"
 vscode "ms-vsliveshare.vsliveshare"
 {{ end }}
