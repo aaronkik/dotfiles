@@ -1,0 +1,11 @@
+{{- if eq .chezmoi.os "darwin" -}}
+#!/bin/zsh
+
+# When the month has changed update fzf-tab.
+# fzf-tab hash: {{ now.Format "01" | sha256sum }}
+
+echo "\033[32mMonth hash changed, running fzf-tab.zsh!\033[m"
+
+source "$HOME/.custom_plugins/fzf-tab.zsh"
+
+{{- end -}}

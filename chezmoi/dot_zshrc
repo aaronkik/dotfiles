@@ -3,6 +3,9 @@
 
 autoload -U compinit; compinit
 
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+
 export GPG_TTY=$(tty)
 
 export LANG="en_GB.UTF-8"
@@ -26,10 +29,12 @@ source "$HOME/.custom_config/zstyle.zsh"
 
 source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-eval "$(starship init zsh)"
+# Keep near the end to avoid conflicts
+# https://github.com/Aloxaf/fzf-tab/issues/137
+source "$HOME/custom_plugins/fzf-tab/fzf-tab.plugin.zsh"
 
-# Set up fzf key bindings and fuzzy completion
-source <(fzf --zsh)
+# Stays at the end
+eval "$(starship init zsh)"
 
 # Amazon Q post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
