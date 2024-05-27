@@ -1,8 +1,8 @@
 alias c=clear
 alias epoch='date +%s'
 alias iso='epoch | jq todate | pbcopy'
-alias l=exa
-alias ls='exa -lah'
+alias l=eza
+alias ls='eza --all --git-repos --header --icons --long --no-permissions --no-filesize --no-user --time-style relative'
 alias h='history -E'
 alias jj='pbpaste | jsonpp -s | pbcopy'
 alias rm=trash
