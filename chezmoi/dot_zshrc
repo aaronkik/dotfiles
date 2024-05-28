@@ -1,6 +1,3 @@
-# Amazon Q pre block. Keep at the top of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
-
 autoload -U compinit; compinit
 
 # Set up fzf key bindings and fuzzy completion
@@ -35,6 +32,3 @@ source "$HOME/custom_plugins/fzf-tab/fzf-tab.plugin.zsh"
 
 # Stays at the end
 eval "$(starship init zsh)"
-
-# Amazon Q post block. Keep at the bottom of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
