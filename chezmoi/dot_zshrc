@@ -19,6 +19,9 @@ export EDITOR="ws --wait"
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 
+# Added by Toolbox App (Jetbrains)
+export PATH="$PATH:/Users/$USER/Library/Application Support/JetBrains/Toolbox/scripts"
+
 source "$HOME/.custom_config/aliases.sh"
 source "$HOME/.custom_config/functions.sh"
 source "$HOME/.custom_config/history.zsh"
