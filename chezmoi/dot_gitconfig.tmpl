@@ -1,9 +1,16 @@
+[branch]
+    sort = -committerdate
+[column]
+    ui = auto
 [commit]
     gpgsign = false
 [credential "https://github.com"]
 	helper = !/opt/homebrew/bin/gh auth git-credential
 [credential "https://gist.github.com"]
 	helper = !/opt/homebrew/bin/gh auth git-credential
+[maintenance]
+    auto = false
+    strategy = incremental
 [user]
 	email = {{ .githubEmail }}
 	name = {{ .githubName }}
