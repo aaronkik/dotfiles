@@ -1,16 +1,16 @@
 alias c=clear
 alias epoch='date +%s'
-alias iso='epoch | jq todate | pbcopy'
+alias iso='epoch | jq --raw-output todate | pbcopy'
 alias l=eza
 alias ls='eza --all --git-repos --header --icons --long --no-permissions --no-filesize --no-user --time-style relative'
 alias h='history -E'
 alias jj='pbpaste | jsonpp -s | pbcopy'
 alias rm=trash
 alias s='source ~/.zshrc'
-alias to_epoch='pbpaste | jq fromdate | pbcopy'
-alias to_iso='pbpaste | jq todate | pbcopy'
-alias to_json='pbpaste | jq fromjson | pbcopy'
-alias to_string='pbpaste | jq tostring | pbcopy'
+alias to_epoch='pbpaste | jq --raw-output fromdate | pbcopy'
+alias to_iso='pbpaste | jq --raw-output todate | pbcopy'
+alias to_json='pbpaste | jq --raw-output fromjson | pbcopy'
+alias to_string='pbpaste | jq --raw-output tostring | pbcopy'
 alias ws='webstorm nosplash'
 alias uuid='uuidgen | tr -d "\n" | tr "[:upper:]" "[:lower:]" | pbcopy'
 
