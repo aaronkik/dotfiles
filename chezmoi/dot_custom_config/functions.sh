@@ -13,15 +13,9 @@ source_if_exists () {
 # GIT FUNCTIONS ################################################################
 ################################################################################
 
-gb () {
-    git branch "$1"
-    git checkout "$1"
-}
-
 gbr () {
-    git branch "$1"
+    git checkout -b "$1"
     git push -u origin "$1"
-    git checkout "$1"
 }
 
 gbd () {
