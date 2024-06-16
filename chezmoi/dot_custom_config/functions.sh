@@ -1,11 +1,11 @@
 mkcd() {
     mkdir -p "$1"
-    cd "$1"
+    cd "$1" || exit
 }
 
 source_if_exists () {
     if test -r "$1"; then
-        source "$1"
+       source "$1"
     fi
 }
 
@@ -84,20 +84,20 @@ show_git_head() {
 }
 
 pretty_git_log() {
-    git log --since="6 months ago" --graph --pretty="tformat:${LOG_FORMAT}" $* | pretty_git_format | git_page_maybe
+    git log --since="6 months ago" --graph --pretty="tformat:${LOG_FORMAT}" "$*" | pretty_git_format | git_page_maybe
 }
 
 pretty_git_log_all() {
-    git log --all --since="6 months ago" --graph --pretty="tformat:${LOG_FORMAT}" $* | pretty_git_format | git_page_maybe
+    git log --all --since="6 months ago" --graph --pretty="tformat:${LOG_FORMAT}" "$*" | pretty_git_format | git_page_maybe
 }
 
 
 pretty_git_branch() {
-    git branch -v --color=always --format=${BRANCH_FORMAT} $* | pretty_git_format
+    git branch -v --color=always --format=${BRANCH_FORMAT} "$*" | pretty_git_format
 }
 
 pretty_git_branch_sorted() {
-    git branch -v --color=always --format=${BRANCH_FORMAT} --sort=-committerdate $* | pretty_git_format
+    git branch -v --color=always --format=${BRANCH_FORMAT} --sort=-committerdate "$*" | pretty_git_format
 }
 
 pretty_git_format() {
