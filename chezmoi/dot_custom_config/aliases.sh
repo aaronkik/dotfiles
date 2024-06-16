@@ -23,5 +23,6 @@ alias gc='git commit'
 alias gl=pretty_git_log
 alias gla=pretty_git_log_all
 alias gp='git push'
+alias gpn='git push --no-verify'
 alias grpo='git remote prune origin'
 alias ff='grpo && git pull --ff-only'
