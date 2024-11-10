@@ -11,3 +11,5 @@ defaults write com.apple.dock autohide-delay -float 0
 defaults write com.apple.dock autohide-time-modifier -float 0
 
 defaults write com.apple.finder ShowPathbar -bool true
+
+defaults write com.apple.WindowManager EnableTiledWindowMargins -float 0
