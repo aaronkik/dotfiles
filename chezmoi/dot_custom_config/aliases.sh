@@ -11,7 +11,7 @@ alias to_epoch='pbpaste | jq --raw-output fromdate | pbcopy'
 alias to_iso='pbpaste | jq --raw-output todate | pbcopy'
 alias to_json='pbpaste | jq --raw-output fromjson | pbcopy'
 alias to_string='pbpaste | jq --raw-output tostring | pbcopy'
-alias ws='webstorm nosplash'
+alias ws='goland nosplash'
 alias uuid='uuidgen | tr -d "\n" | tr "[:upper:]" "[:lower:]" | pbcopy'
 
 # Git aliases
