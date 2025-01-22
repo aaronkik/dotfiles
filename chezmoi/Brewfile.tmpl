@@ -1,9 +1,12 @@
 {{- if eq .chezmoi.os "darwin" -}}
 tap "homebrew/bundle"
+tap "common-fate/granted"
 
 brew "awscli"
 brew "btop"
 brew "chezmoi"
+brew "docker"
+brew "docker-compose"
 brew "eza"
 brew "fzf"
 brew "gh"
@@ -11,6 +14,7 @@ brew "go"
 brew "git"
 brew "gnupg"
 brew "gping"
+brew "granted"
 brew "jq"
 brew "jsonpp"
 brew "shellcheck"
@@ -21,7 +25,8 @@ brew "watch"
 brew "zsh-syntax-highlighting"
 
 {{- if eq .isWorkComputer true }}
-
+brew "libpq"
+brew "postgresql@16"
 {{ end }}
 
 # Cask - Apps
