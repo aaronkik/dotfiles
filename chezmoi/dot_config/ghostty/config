@@ -1,9 +1,8 @@
 auto-update = download
-background-opacity = 0.85
-background-blur-radius = 10
+background-opacity = 1
 font-family = JetBrainsMono NFM
 font-size = 18
-theme = catppuccin-frappe
+theme = dark:catppuccin-mocha,light:catppuccin-latte
 window-padding-x = 8
 window-padding-y = 8
 window-save-state = always
