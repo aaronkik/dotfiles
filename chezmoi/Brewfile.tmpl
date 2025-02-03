@@ -60,6 +60,11 @@ cask "transmission"
 cask "vlc"
 {{ end }}
 
+# Cask - Apps - Work Computer
+{{ if eq .isWorkComputer true }}
+cask "hoppscotch"
+{{ end }}
+
 # Cask - Fonts
 cask "font-fira-code"
 cask "font-fira-code-nerd-font"
