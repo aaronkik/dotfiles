@@ -1,6 +1,7 @@
 {{- if eq .chezmoi.os "darwin" -}}
 tap "homebrew/bundle"
 tap "common-fate/granted"
+tap "remotemobprogramming/brew"
 
 brew "awscli"
 brew "btop"
@@ -27,6 +28,7 @@ brew "zsh-syntax-highlighting"
 {{- if eq .isWorkComputer true }}
 brew "libpq"
 brew "postgresql@16"
+brew "remotemobprogramming/brew/mob"
 {{ end }}
 
 # Cask - Apps
