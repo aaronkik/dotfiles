@@ -15,8 +15,8 @@ alias ide='goland nosplash'
 alias uuid='uuidgen | tr -d "\n" | tr "[:upper:]" "[:lower:]" | pbcopy'
 
 # Git aliases
-alias gsw='git switch'
-alias gswc='git switch --create'
+alias sw='git switch'
+alias swc='git switch --create'
 alias gr='git restore'
 alias gs='git status'
 alias ga='git add'
