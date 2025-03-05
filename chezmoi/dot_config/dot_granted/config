@@ -1,0 +1,9 @@
+DefaultBrowser = "Arc"
+CustomBrowserPath = ""
+CustomSSOBrowserPath = ""
+Ordering = ""
+ExportCredentialSuffix = ""
+ExportCredsToAWS = true
+
+[Keyring]
+  Backend = "keychain"
