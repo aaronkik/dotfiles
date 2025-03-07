@@ -21,6 +21,7 @@ export EDITOR="vim"
 
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+export VOLTA_FEATURE_PNPM=1
 
 # Added by Toolbox App (Jetbrains)
 export PATH="$PATH:/Users/$USER/Library/Application Support/JetBrains/Toolbox/scripts"
