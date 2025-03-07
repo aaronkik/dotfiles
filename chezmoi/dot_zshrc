@@ -33,6 +33,10 @@ source "$HOME/.custom_config/zstyle.zsh"
 
 source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# Granted - https://docs.commonfate.io/granted
+which granted >/dev/null 2>&1 && granted completion -s zsh >/dev/null 2>&1
+
+
 # Keep near the end to avoid conflicts
 # https://github.com/Aloxaf/fzf-tab/issues/137
 source "$HOME/custom_plugins/fzf-tab/fzf-tab.plugin.zsh"
