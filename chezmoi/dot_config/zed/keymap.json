@@ -18,7 +18,9 @@
     "bindings": {
       "ctrl-cmd-alt-shift-p": "editor::Format",
       "ctrl-cmd-alt-shift-e": "editor::GoToDiagnostic",
-      "alt-tab": "workspace::ActivateNextPane"
+      "alt-tab": "workspace::ActivateNextPane",
+      "ctrl-shift-right": "editor::SelectLargerSyntaxNode", // Expand Selection
+      "ctrl-shift-left": "editor::SelectSmallerSyntaxNode" // Shrink Selection
     }
   },
   {
