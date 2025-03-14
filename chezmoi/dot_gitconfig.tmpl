@@ -1,18 +1,41 @@
 [branch]
     sort = -committerdate
+
 [column]
     ui = auto
+
 [commit]
     gpgsign = false
+
+[core]
+    pager = delta
+
 [credential "https://github.com"]
 	helper = !/opt/homebrew/bin/gh auth git-credential
+
 [credential "https://gist.github.com"]
 	helper = !/opt/homebrew/bin/gh auth git-credential
+
+[delta]
+    hyperlinks = true
+    hyperlinks-file-link-format = "zed://file/{path}:{line}"
+    line-numbers = true
+    navigate = true
+    side-by-side = true
+
+[interactive]
+    diffFilter = delta --color-only
+
 [maintenance]
     auto = false
     strategy = incremental
+
+[merge]
+    conflictstyle = zdiff3
+
 [push]
     autoSetupRemote = true
+
 [user]
 	email = {{ .githubEmail }}
 	name = {{ .githubName }}
