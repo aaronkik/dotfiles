@@ -9,7 +9,6 @@
   {
     "context": "Workspace",
     "bindings": {
-      "ctrl-cmd-alt-shift-t": "terminal_panel::ToggleFocus",
       "ctrl-cmd-alt-shift-d": "project_panel::ToggleFocus"
     }
   },
@@ -18,9 +17,13 @@
     "bindings": {
       "ctrl-cmd-alt-shift-p": "editor::Format",
       "ctrl-cmd-alt-shift-e": "editor::GoToDiagnostic",
-      "alt-tab": "workspace::ActivateNextPane",
       "ctrl-shift-right": "editor::SelectLargerSyntaxNode", // Expand Selection
-      "ctrl-shift-left": "editor::SelectSmallerSyntaxNode" // Shrink Selection
+      "ctrl-shift-left": "editor::SelectSmallerSyntaxNode", // Shrink Selection
+      "shift-f10": "editor::OpenContextMenu", // VS Code Default
+      "ctrl-cmd-alt-shift-m": "editor::OpenContextMenu",
+      "alt-tab": "workspace::ActivateNextPane",
+      "ctrl-cmd-alt-shift-i": "editor::GoToImplementation",
+      "ctrl-cmd-alt-shift-r": "editor::FindAllReferences"
     }
   },
   {
