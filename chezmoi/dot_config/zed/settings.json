@@ -7,6 +7,13 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "assistant": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-3-7-sonnet-latest"
+    },
+    "version": "2"
+  },
   "icon_theme": "Catppuccin Mocha",
   "features": {
     "edit_prediction_provider": "supermaven"
@@ -31,5 +38,5 @@
     "mode": "subtle"
   },
   "show_user_picture": false,
-  "show_edit_predictions": false
+  "show_edit_predictions": true
 }
