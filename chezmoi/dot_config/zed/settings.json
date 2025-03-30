@@ -38,5 +38,5 @@
     "mode": "subtle"
   },
   "show_user_picture": false,
-  "show_edit_predictions": true
+  "show_edit_predictions": false
 }
