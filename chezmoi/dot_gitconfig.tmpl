@@ -8,13 +8,18 @@
     gpgsign = false
 
 [core]
+    fsmonitor = true
     pager = delta
+    untrackedcache = true
 
 [credential "https://github.com"]
 	helper = !/opt/homebrew/bin/gh auth git-credential
 
 [credential "https://gist.github.com"]
 	helper = !/opt/homebrew/bin/gh auth git-credential
+
+[diff]
+    algorithm = histogram
 
 [delta]
     hyperlinks = true
