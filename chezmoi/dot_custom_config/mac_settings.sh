@@ -20,6 +20,7 @@ defaults write com.apple.dock autohide-time-modifier -float 0
 defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.finder FXRemoveOldTrashItems -float 1
 defaults write com.apple.finder ShowRecentTags -float 0
+defaults write com.apple.finder ShowStatusBar -float 1
 
 defaults write com.apple.menuextra.clock ShowSeconds -float 1
 
