@@ -26,3 +26,11 @@ defaults write com.apple.menuextra.clock ShowSeconds -float 1
 
 defaults write com.apple.WindowManager EnableTiledWindowMargins -float 0
 
+# Enable swipe between pages
+defaults write NSGlobalDomain AppleEnableSwipeNavigateWithScrolls -bool true
+
+# Enable keyboard navigation: Settings -> Keyboard -> Keyboard navigation
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 2
+
+# Use FN keys as standard keys
+defaults write NSGlobalDomain com.apple.keyboard.fnState -bool true
