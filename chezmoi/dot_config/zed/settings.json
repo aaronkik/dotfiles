@@ -27,7 +27,7 @@
   "theme": {
     "mode": "system",
     "light": "Catppuccin Latte",
-    "dark": "Catppuccin Mocha"
+    "dark": "Catppuccin Frappé"
   },
   "tabs": {
     "git_status": true
