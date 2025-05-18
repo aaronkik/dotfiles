@@ -1,0 +1,28 @@
+{{- if eq .chezmoi.os "darwin" -}}
+#!/bin/zsh
+
+# When the month has changed update tmux-tpm.
+# tmux-tpm hash: {{ now.Format "01" | sha256sum }}
+
+echo "\033[32mMonth hash changed, running tmux-tpm.zsh!\033[m"
+
+TMUX_TPM="$HOME/.tmux/plugins/tpm"
+
+if command -v git > /dev/null 2>&1; then
+    if command -v tmux > /dev/null 2>&1; then
+        if [ ! -d "$TMUX_TPM" ]; then
+          echo "\033[32mCloning tmux-plugins/tpm\033[m"
+          git clone git@github.com:tmux-plugins/tpm.git "$TMUX_TPM"
+        else
+          echo "\033[33mtmux-tpm already exists, pulling latest changes\033[m"
+          git -C "$TMUX_TPM" pull
+          echo "\033[32mPulled tmux-plugins/tpm\033[m"
+        fi
+    else
+      echo "\033[33mtmux is not installed, tmux is a requirement for tmux-tpm\033[m"
+    fi
+else
+  echo "\033[33mGit is not installed, skipping installation of tmux-tpm\033[m"
+fi
+
+{{- end -}}
