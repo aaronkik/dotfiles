@@ -13,6 +13,7 @@ alias to_json='pbpaste | jq --raw-output fromjson | pbcopy'
 alias to_string='pbpaste | jq --raw-output tostring | pbcopy'
 alias ide='goland nosplash'
 alias uuid='uuidgen | tr -d "\n" | tr "[:upper:]" "[:lower:]" | pbcopy'
+alias cat=bat
 
 # Git aliases
 alias sw='git switch'
