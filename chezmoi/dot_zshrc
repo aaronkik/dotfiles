@@ -31,6 +31,8 @@ source "$HOME/.custom_config/functions.sh"
 source "$HOME/.custom_config/history.zsh"
 source "$HOME/.custom_config/zstyle.zsh"
 
+source "$HOME/.custom_plugins/fzf-git.sh"
+
 source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Granted - https://docs.commonfate.io/granted
