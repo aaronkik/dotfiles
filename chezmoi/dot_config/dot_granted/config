@@ -1,4 +1,4 @@
-DefaultBrowser = "Arc"
+DefaultBrowser = "Chrome"
 CustomBrowserPath = ""
 CustomSSOBrowserPath = ""
 Ordering = ""
