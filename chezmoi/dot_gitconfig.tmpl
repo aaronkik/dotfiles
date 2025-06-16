@@ -8,8 +8,10 @@
     gpgsign = false
 
 [core]
+    compression = 9
     fsmonitor = true
     pager = delta
+    whitespace = error
     untrackedcache = true
 
 [credential "https://github.com"]
@@ -23,7 +25,7 @@
 
 [delta]
     hyperlinks = true
-    hyperlinks-file-link-format = "zed://file/{path}:{line}"
+    hyperlinks-file-link-format = "goland://open?file={path}&line={line}"
     line-numbers = true
     navigate = true
 
@@ -37,8 +39,18 @@
 [merge]
     conflictstyle = zdiff3
 
+[pull]
+  rebase = true
+
 [push]
     autoSetupRemote = true
+
+[rebase]
+  autoStash = true
+
+[status]
+  branch = true
+  showStash = true
 
 [user]
 	email = {{ .githubEmail }}
