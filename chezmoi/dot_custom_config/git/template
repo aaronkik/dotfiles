@@ -1,0 +1,17 @@
+# chore:
+# fix:
+# refactor:
+# build:
+# ci:
+# docs:
+# feat:
+# perf:
+# revert:
+# style:
+# test:
+#
+# <type>(optional scope): <description>
+#
+# [optional body]
+#
+# [optional footer(s)]
