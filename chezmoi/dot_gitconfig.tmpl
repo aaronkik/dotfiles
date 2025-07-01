@@ -31,6 +31,9 @@
     line-numbers = true
     navigate = true
 
+[gpg]
+  program = /opt/homebrew/bin/gpg
+
 [interactive]
     diffFilter = delta --color-only
 
@@ -55,6 +58,10 @@
   branch = true
   showStash = true
 
+[tag]
+  gpgSign = true
+
 [user]
 	email = {{ .githubEmail }}
 	name = {{ .githubName }}
+  signingKey = 2A56B46C61B1E24683AF668BFB2AD8E82613AF3B
