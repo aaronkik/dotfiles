@@ -1,11 +1,12 @@
 [branch]
     sort = -committerdate
+    autoSetupMerge = simple
 
 [column]
     ui = auto
 
 [commit]
-    gpgsign = false
+    gpgsign = true
     template = ~/.custom_config/git/template
 
 [core]
@@ -45,6 +46,7 @@
 
 [push]
     autoSetupRemote = true
+    default = current
 
 [rebase]
   autoStash = true
