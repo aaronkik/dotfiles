@@ -223,12 +223,6 @@ style = 'bold green'
 style = 'bold purple'
 symbol = ' '
 
-[memory_usage]
-disabled = false
-format = '[$symbol$ram( | $swap)]($style) '
-style = 'bold red'
-threshold = 80
-
 [nodejs]
 format = "[$symbol($version) ]($style)"
 
