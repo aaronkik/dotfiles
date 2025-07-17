@@ -4,16 +4,12 @@
 {{- $isWorkComputer := promptBoolOnce . "isWorkComputer" "Is this a work computer" -}}
 {{- $isPersonalComputer := promptBoolOnce . "isPersonalComputer" "Is this a personal computer" -}}
 
-{{- $bedrockApiKey := promptStringOnce . "bedrockApiKey" "Enter AWS Bedrock API Key" -}}
-
-
 {
   "data": {
     "githubName": "{{ $githubName }}",
     "githubEmail": "{{ $githubEmail }}",
     "isPersonalComputer": {{ $isPersonalComputer }},
-    "isWorkComputer": {{ $isWorkComputer }},
-    "bedrockApiKey": {{ $bedrockApiKey }}
+    "isWorkComputer": {{ $isWorkComputer }}
   },
   "progress": true
 }
