@@ -113,3 +113,48 @@ git_page_maybe() {
         less --quit-if-one-screen --no-init --RAW-CONTROL-CHARS --chop-long-lines
     fi
 }
+
+
+delete_aws_stacks() {
+    local PREFIX=$1
+    local EXECUTE=false
+
+    if [ -z "$1" ]; then
+        echo "Please supply a stack name prefix" >&2
+        exit 1
+    fi
+
+    if echo "$PREFIX" | grep -qiE "prod|staging"; then
+        echo "ERROR: The prefix contains a restricted environment keyword (prod, staging)." >&2
+        exit 1
+    fi
+
+    if [[ "$2" == "--execute" ]]; then
+        EXECUTE=true
+    fi
+
+    STACKS=$(aws cloudformation list-stacks --stack-status-filter CREATE_COMPLETE UPDATE_COMPLETE ROLLBACK_COMPLETE \
+        --query "StackSummaries[?starts_with(StackName, \`${PREFIX}\`)].StackName" --output text) | jq -r '.[]'
+
+    # echo -e "Stacks found: $STACKS"
+    # echo -e "Removing prod/staging"
+
+    # STACKS=$(echo $STACKS | jq '.[] | select(contains("prod") | not))')
+    # echo -e "Filtered stacks: $STACKS"
+
+
+    if [ -z "$STACKS" ]; then
+        echo "No stacks found with prefix: $PREFIX" >&2
+        exit 0
+    fi
+
+    for STACK in $STACKS; do
+        echo "Will delete stack: $STACK" >&2
+        if [ "$EXECUTE" = true ]; then
+       	aws cloudformation delete-stack --stack-name "$STACK"
+    	echo "Deleting stack: $STACK" >&2
+        fi
+    done
+
+    echo "Deletion initiated for all matching stacks." >&2
+}
