@@ -27,11 +27,11 @@ gbdr () {
     git push origin --delete "$1"
 }
 
-gcm () {
-    git commit -m "$*"
+_gcm () {
+    noglob git commit -m "$*"
 }
 
-gcmp () {
+_gcmp () {
     git commit -m "$*"
     git push
 }
