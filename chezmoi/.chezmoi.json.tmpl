@@ -4,12 +4,16 @@
 {{- $isWorkComputer := promptBoolOnce . "isWorkComputer" "Is this a work computer" -}}
 {{- $isPersonalComputer := promptBoolOnce . "isPersonalComputer" "Is this a personal computer" -}}
 
+{{- $claudeGitHubPAT := promptStringOnce . "claudeGitHubPAT" "Claude Github PAT" -}}
+
+
 {
   "data": {
     "githubName": "{{ $githubName }}",
     "githubEmail": "{{ $githubEmail }}",
     "isPersonalComputer": {{ $isPersonalComputer }},
-    "isWorkComputer": {{ $isWorkComputer }}
+    "isWorkComputer": {{ $isWorkComputer }},
+    "claudeGitHubPAT": {{ $claudeGitHubPAT }}
   },
   "progress": true
 }
