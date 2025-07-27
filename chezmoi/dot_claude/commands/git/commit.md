@@ -12,8 +12,10 @@ description: Create a git commit using conventional commits
 
 ## Your task
 
-Using conventional commits and based on the above changes, create a single git commit. If the diff can be split into
+Using conventional commits and based on the above changes, create a single git commit. If the changes can be split into
 further logical commits without breaking the code, do this instead.
+
+The British English language MUST be used.
 
 The format of the conventional commit should be as follows:
 
