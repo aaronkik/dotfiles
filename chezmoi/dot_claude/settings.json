@@ -10,6 +10,7 @@
       "Bash(git:*)",
       "Bash(gh:*)",
       "Bash(ls:*)",
+      "Bash(chezmoi:*)",
       "Edit",
       "Glob",
       "Grep",
