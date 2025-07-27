@@ -2,6 +2,7 @@
   "env": {
     "DISABLE_TELEMETRY": 1
   },
+  "includeCoAuthoredBy": false,
   "permissions": {
     "defaultMode": "acceptEdits",
     "allow": [
