@@ -40,14 +40,14 @@ brew "yazi"
 brew "zoxide"
 brew "zsh-syntax-highlighting"
 
-{{- if eq .isWorkComputer true }}
+{{ if eq .isWorkComputer true -}}
 brew "docker"
 brew "docker-compose"
 brew "graphviz"
 brew "libpq"
 brew "postgresql@16"
 brew "remotemobprogramming/brew/mob"
-{{ end }}
+{{ end -}}
 
 # Cask - Apps
 cask "claude"
@@ -68,7 +68,7 @@ cask "visual-studio-code"
 cask "zed"
 
 # Cask - Apps - Personal Computer
-{{ if eq .isPersonalComputer true }}
+{{ if eq .isPersonalComputer true -}}
 # cask "exifcleaner"
 cask "orbstack"
 cask "protonvpn"
@@ -77,7 +77,7 @@ cask "spotify"
 cask "steam"
 cask "transmission"
 cask "vlc"
-{{ end }}
+{{ end -}}
 
 # Cask - Fonts
 cask "font-fira-code"
@@ -99,17 +99,16 @@ vscode "mikestead.dotenv"
 vscode "naumovs.color-highlight"
 vscode "redhat.vscode-yaml"
 vscode "redhat.vscode-xml"
-vscode "supermaven.supermaven"
 vscode "vitest.explorer"
 vscode "VisualStudioExptTeam.intellicode-api-usage-examples"
 vscode "VisualStudioExptTeam.vscodeintellicode"
 vscode "yzhang.markdown-all-in-one"
 
-{{- if eq .isWorkComputer true }}
+{{ if eq .isWorkComputer true -}}
 vscode "CircleCI.circleci"
 vscode "firsttris.vscode-jest-runner"
 vscode "ms-vsliveshare.vsliveshare"
 vscode "Prisma.prisma"
-{{ end }}
+{{ end -}}
 
 {{- end -}}
