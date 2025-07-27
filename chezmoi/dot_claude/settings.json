@@ -7,6 +7,8 @@
     "defaultMode": "acceptEdits",
     "allow": [
       "Bash(find:*)",
+      "Bash(git:*)",
+      "Bash(gh:*)",
       "Bash(ls:*)",
       "Edit",
       "Glob",
