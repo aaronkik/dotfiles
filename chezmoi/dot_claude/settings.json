@@ -3,6 +3,7 @@
     "DISABLE_TELEMETRY": 1
   },
   "permissions": {
+    "defaultMode": "acceptEdits",
     "allow": [
       "Bash(find:*)",
       "Bash(ls:*)",
