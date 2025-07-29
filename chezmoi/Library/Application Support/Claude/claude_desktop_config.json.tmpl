@@ -19,6 +19,13 @@
     "args" (list "run" "-i" "--rm" "-e" "GITHUB_PERSONAL_ACCESS_TOKEN" "ghcr.io/github/github-mcp-server")
     "env" (dict "GITHUB_PERSONAL_ACCESS_TOKEN" .claudeGitHubPAT)
   )
+  "awslabs-aws-api-mcp-server" (dict
+    "command" "uvx"
+    "args" (list "awslabs.aws-api-mcp-server@latest")
+    "env" (dict "FASTMCP_LOG_LEVEL" "ERROR")
+    "disabled" false
+    "autoApprove" (list)
+  )
   "awslabs-cdk-mcp-server" (dict
     "command" "uvx"
     "args" (list "awslabs.cdk-mcp-server@latest")
@@ -73,6 +80,16 @@
   "Context7" (dict
     "command" "npx"
     "args" (list "-y" "@upstash/context7-mcp")
+  )
+  "awslabs.aws-documentation-mcp-server" (dict
+    "command" "uvx"
+    "args" (list "awslabs.aws-documentation-mcp-server@latest")
+    "env" (dict
+      "FASTMCP_LOG_LEVEL" "ERROR"
+      "AWS_DOCUMENTATION_PARTITION" "aws"
+    )
+    "disabled" false
+    "autoApprove" (list)
   )
 -}}
 
