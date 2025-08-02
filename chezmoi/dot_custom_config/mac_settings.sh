@@ -34,3 +34,25 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 2
 
 # Use FN keys as standard keys
 defaults write NSGlobalDomain com.apple.keyboard.fnState -bool true
+
+# Disable Man page shortcuts interaction with JetBrains IDE shortcuts.
+# https://biercoff.com/cmd-shift-a-opens-terminal/
+# https://gist.github.com/theodson/b4282a3b6e54091db4d52a4c3c10ad25
+defaults write pbs NSServiceStatus '{
+  "com.apple.Terminal - Open man Page in Terminal - openManPage" = {
+    "presentation_modes" = {
+      "ContextMenu" = false;
+      "ServicesMenu" = false;
+    };
+    "enabled_context_menu" = false;
+    "enabled_services_menu" = false;
+  };
+  "com.apple.Terminal - Search man Page Index in Terminal - searchManPages" = {
+    "presentation_modes" = {
+      "ContextMenu" = false;
+      "ServicesMenu" = false;
+    };
+    "enabled_context_menu" = false;
+    "enabled_services_menu" = false;
+  };
+}'
