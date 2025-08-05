@@ -10,6 +10,8 @@ description: Create a git commit using conventional commits
 - Current branch: !`git branch --show-current`
 - Recent commits: !`git log --oneline -10`
 
+$ARGUMENTS
+
 ## Your task
 
 Using conventional commits and based on the above changes, create a single git commit. If the changes can be split into
