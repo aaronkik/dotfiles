@@ -212,7 +212,7 @@ eu-west-1 = 'euw1'
 eu-west-2 = 'euw2'
 
 [cmd_duration]
-format = '[⌛️$duration ]($style)'
+format = '[⌛️ $duration ]($style)'
 style = "bold bright-yellow"
 
 [fill]
