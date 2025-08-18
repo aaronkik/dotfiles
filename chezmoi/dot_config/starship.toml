@@ -13,12 +13,13 @@ $hostname\
 $localip\
 $shlvl\
 $directory\
-$fill\
+$line_break\
 $git_branch\
 $git_commit\
 $git_status\
 $git_state\
-$git_metrics\n\
+$git_metrics\
+$line_break\
 $aws\
 $kubernetes\
 $docker_context\
