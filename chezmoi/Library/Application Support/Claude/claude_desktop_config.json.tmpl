@@ -2,98 +2,102 @@
 {{- if eq .isWorkComputer true -}}
   {{- $workServers = dict
     "circleci-mcp-server" (dict
-      "command" "npx"
       "args" (list "-y" "@circleci/mcp-server-circleci")
+      "command" "npx"
       "env" (dict "CIRCLECI_TOKEN" .circleciPATToken)
     )
     "Prisma" (dict
-      "command" "npx"
       "args" (list "-y" "prisma" "mcp")
+      "command" "npx"
     )
   -}}
 {{- end -}}
 
 {{- $baseServers := dict
   "github" (dict
-    "command" "docker"
     "args" (list "run" "-i" "--rm" "-e" "GITHUB_PERSONAL_ACCESS_TOKEN" "ghcr.io/github/github-mcp-server")
+    "command" "docker"
     "env" (dict "GITHUB_PERSONAL_ACCESS_TOKEN" .claudeGitHubPAT)
   )
   "awslabs-aws-api-mcp-server" (dict
-    "command" "uvx"
     "args" (list "awslabs.aws-api-mcp-server@latest")
-    "env" (dict "FASTMCP_LOG_LEVEL" "ERROR")
-    "disabled" false
     "autoApprove" (list)
+    "command" "uvx"
+    "disabled" false
+    "env" (dict "FASTMCP_LOG_LEVEL" "ERROR")
   )
   "awslabs-cdk-mcp-server" (dict
-    "command" "uvx"
     "args" (list "awslabs.cdk-mcp-server@latest")
-    "env" (dict "FASTMCP_LOG_LEVEL" "ERROR")
-    "disabled" false
     "autoApprove" (list)
+    "command" "uvx"
+    "disabled" false
+    "env" (dict "FASTMCP_LOG_LEVEL" "ERROR")
   )
   "awslabs-cost-explorer-mcp-server" (dict
-    "command" "uvx"
     "args" (list "awslabs.cost-explorer-mcp-server@latest")
-    "env" (dict "FASTMCP_LOG_LEVEL" "ERROR")
-    "disabled" false
     "autoApprove" (list)
+    "command" "uvx"
+    "disabled" false
+    "env" (dict "FASTMCP_LOG_LEVEL" "ERROR")
   )
   "awslabs-cloudwatch-mcp-server" (dict
-    "autoApprove" (list)
-    "disabled" false
-    "command" "uvx"
     "args" (list "awslabs.cloudwatch-mcp-server@latest")
+    "autoApprove" (list)
+    "command" "uvx"
+    "disabled" false
     "env" (dict "FASTMCP_LOG_LEVEL" "ERROR")
     "transportType" "stdio"
   )
   "awslabs-amazon-sns-sqs-mcp-server" (dict
-    "command" "uvx"
     "args" (list "awslabs.amazon-sns-sqs-mcp-server@latest")
+    "command" "uvx"
     "env" (dict "FASTMCP_LOG_LEVEL" "ERROR")
   )
   "awslabs-cfn-mcp-server" (dict
-    "command" "uvx"
     "args" (list "awslabs.cfn-mcp-server@latest")
-    "disabled" false
     "autoApprove" (list)
+    "command" "uvx"
+    "disabled" false
   )
   "awslabs-dynamodb-mcp-server" (dict
-    "command" "uvx"
     "args" (list "awslabs.dynamodb-mcp-server@latest")
-    "env" (dict "DDB-MCP-READONLY" "true" "FASTMCP_LOG_LEVEL" "ERROR")
-    "disabled" false
     "autoApprove" (list)
+    "command" "uvx"
+    "disabled" false
+    "env" (dict "DDB-MCP-READONLY" "true" "FASTMCP_LOG_LEVEL" "ERROR")
   )
   "awslabs-s3-tables-mcp-server" (dict
-    "command" "uvx"
     "args" (list "awslabs.s3-tables-mcp-server@latest")
+    "command" "uvx"
   )
   "awslabs-aws-pricing-mcp-server" (dict
-    "command" "uvx"
     "args" (list "awslabs.aws-pricing-mcp-server@latest")
-    "env" (dict "FASTMCP_LOG_LEVEL" "ERROR")
-    "disabled" false
     "autoApprove" (list)
+    "command" "uvx"
+    "disabled" false
+    "env" (dict "FASTMCP_LOG_LEVEL" "ERROR")
   )
   "Context7" (dict
-    "command" "npx"
     "args" (list "-y" "@upstash/context7-mcp")
+    "command" "npx"
   )
   "awslabs-aws-documentation-mcp-server" (dict
-    "command" "uvx"
     "args" (list "awslabs.aws-documentation-mcp-server@latest")
+    "autoApprove" (list)
+    "command" "uvx"
+    "disabled" false
     "env" (dict
       "FASTMCP_LOG_LEVEL" "ERROR"
       "AWS_DOCUMENTATION_PARTITION" "aws"
     )
-    "disabled" false
-    "autoApprove" (list)
   )
 -}}
 
 {{
-  dict "mcpServers" (merge $baseServers $workServers)
+  dict
+    "mcpServers" (merge $baseServers $workServers)
+    "preferences" (dict
+      "menuBarEnabled" false
+    )
   | toPrettyJson
 }}
