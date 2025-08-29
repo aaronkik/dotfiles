@@ -56,3 +56,23 @@ defaults write pbs NSServiceStatus '{
     "enabled_services_menu" = false;
   };
 }'
+
+## Reset terminal settings
+rm ~/Library/Preferences/com.apple.Terminal.plist
+
+echo "Importing Terminal.app themes..."
+TERMINAL_THEMES_DIR="$HOME/.custom_config/Terminal.app/themes"
+
+for theme_file in "$TERMINAL_THEMES_DIR"/*.terminal; do
+    if [ -f "$theme_file" ]; then
+        theme_name=$(basename "$theme_file" .terminal)
+        echo "Importing theme: $theme_name"
+
+        /usr/libexec/PlistBuddy -c "Add :'Window Settings':'$theme_name' dict" ~/Library/Preferences/com.apple.Terminal.plist 2>/dev/null
+        /usr/libexec/PlistBuddy -c "Merge '$theme_file' :'Window Settings':'$theme_name'" ~/Library/Preferences/com.apple.Terminal.plist
+    fi
+done
+
+defaults write com.apple.Terminal "Default Window Settings" -string "catppuccin-frappe"
+defaults write com.apple.Terminal "Startup Window Settings" -string "catppuccin-frappe"
+
