@@ -36,6 +36,7 @@
       "Bash(chezmoi edit:*)",
       "Bash(chezmoi status:*)",
       "Bash(chezmoi update:*)",
+      "Bash(npm run test:*)",
       "Edit",
       "Glob",
       "Grep",
