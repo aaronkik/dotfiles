@@ -198,7 +198,8 @@ crust = "#11111b"
 
 [aws]
 disabled = false
-format = '[$profile $region $duration]($style)'
+format = '[$symbol $profile $region $duration]($style)'
+symbol = '󰸏'
 
 [aws.region_aliases]
 eu-west-1 = 'euw1'
