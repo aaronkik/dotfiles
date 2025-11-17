@@ -5,7 +5,6 @@
 {{- $isPersonalComputer := promptBoolOnce . "isPersonalComputer" "Is this a personal computer" -}}
 
 {{- $claudeGitHubPAT := promptStringOnce . "claudeGitHubPAT" "Claude Github PAT" -}}
-{{- $circleciPATToken := promptStringOnce . "circleciPATToken" "CircleCI PAT" -}}
 
 {
   "data": {
@@ -13,8 +12,7 @@
     "githubEmail": "{{ $githubEmail }}",
     "isPersonalComputer": {{ $isPersonalComputer }},
     "isWorkComputer": {{ $isWorkComputer }},
-    "claudeGitHubPAT": "{{ $claudeGitHubPAT }}",
-    "circleciPATToken": "{{ $circleciPATToken }}"
+    "claudeGitHubPAT": "{{ $claudeGitHubPAT }}"
   },
   "progress": true
 }
