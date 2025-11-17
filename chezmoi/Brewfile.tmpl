@@ -41,9 +41,6 @@ brew "zoxide"
 brew "zsh-syntax-highlighting"
 
 {{ if eq .isWorkComputer true -}}
-brew "graphviz"
-brew "libpq"
-brew "postgresql@16"
 brew "remotemobprogramming/brew/mob"
 {{ end -}}
 
@@ -61,7 +58,6 @@ cask "obsidian"
 cask "orbstack"
 cask "raycast"
 # cask "runjs"
-cask "slack"
 cask "spotify"
 cask "stats"
 cask "visual-studio-code"
@@ -79,6 +75,11 @@ cask "spotify"
 cask "steam"
 cask "transmission"
 cask "vlc"
+{{ end -}}
+
+# Cask - Apps - Work Computer
+{{ if eq .isWorkComputer true -}}
+cask "slack"
 {{ end -}}
 
 # Cask - Fonts
