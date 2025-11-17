@@ -6,13 +6,20 @@
 
 {{- $claudeGitHubPAT := promptStringOnce . "claudeGitHubPAT" "Claude Github PAT" -}}
 
+{{- $workEmail := promptStringOnce . "workEmail" "Work email" -}}
+{{- $workDisplayName := promptStringOnce . "workDisplayName" "Work Display Name" -}}
+{{- $workGpgSigningKey := promptStringOnce . "workGpgSigningKey" "Work GPG Signing Key" -}}
+
 {
   "data": {
     "githubName": "{{ $githubName }}",
     "githubEmail": "{{ $githubEmail }}",
     "isPersonalComputer": {{ $isPersonalComputer }},
     "isWorkComputer": {{ $isWorkComputer }},
-    "claudeGitHubPAT": "{{ $claudeGitHubPAT }}"
+    "claudeGitHubPAT": "{{ $claudeGitHubPAT }}",
+    "workEmail": "{{ $workEmail }}",
+    "workDisplayName": "{{ $workDisplayName }}",
+    "workGpgSigningKey": "{{ $workGpgSigningKey }}"
   },
   "progress": true
 }
