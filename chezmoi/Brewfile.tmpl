@@ -46,6 +46,7 @@ brew "remotemobprogramming/brew/mob"
 
 # Cask - Apps
 cask "claude"
+cask "claude-code"
 cask "cleanshot"
 cask "cursor"
 cask "cyberduck"
@@ -81,6 +82,7 @@ cask "vlc"
 # Cask - Apps - Work Computer
 {{ if eq .isWorkComputer true -}}
 cask "slack"
+cask "miro"
 {{ end -}}
 
 # Cask - Fonts
@@ -98,7 +100,8 @@ vscode "DavidAnson.vscode-markdownlint"
 vscode "dbaeumer.vscode-eslint"
 vscode "dsznajder.es7-react-js-snippets"
 vscode "esbenp.prettier-vscode"
-vscode "github.copilot"
+# vscode "github.copilot"
+# vscode "github.copilot-chat"
 vscode "github.vscode-github-actions"
 vscode "GitHub.vscode-pull-request-github"
 vscode "mechatroner.rainbow-csv"

@@ -48,17 +48,6 @@
     "env" (dict "FASTMCP_LOG_LEVEL" "ERROR")
     "transportType" "stdio"
   )
-  "awslabs-amazon-sns-sqs-mcp-server" (dict
-    "args" (list "awslabs.amazon-sns-sqs-mcp-server@latest")
-    "command" "uvx"
-    "env" (dict "FASTMCP_LOG_LEVEL" "ERROR")
-  )
-  "awslabs-cfn-mcp-server" (dict
-    "args" (list "awslabs.cfn-mcp-server@latest")
-    "autoApprove" (list)
-    "command" "uvx"
-    "disabled" false
-  )
   "awslabs-dynamodb-mcp-server" (dict
     "args" (list "awslabs.dynamodb-mcp-server@latest")
     "autoApprove" (list)
@@ -103,6 +92,7 @@
     "mcpServers" (merge $baseServers $workServers)
     "preferences" (dict
       "menuBarEnabled" false
+      "quickEntryShortcut" "off"
     )
   | toPrettyJson
 }}
