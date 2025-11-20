@@ -37,7 +37,6 @@ source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 # Granted - https://docs.commonfate.io/granted
 which granted >/dev/null 2>&1 && granted completion -s zsh >/dev/null 2>&1
-export GRANTED_ENABLE_AUTO_REASSUME=true
 
 # Keep near the end to avoid conflicts
 # https://github.com/Aloxaf/fzf-tab/issues/137
