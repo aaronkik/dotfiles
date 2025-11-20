@@ -49,6 +49,8 @@ source "$HOME/custom_plugins/fzf-tab/fzf-tab.plugin.zsh"
 # fi
 
 export STAGE=aaron
+# Support Go binaries
+export PATH=$PATH:$HOME/go/bin
 
 # Stays at the end
 eval "$(starship init zsh)"
