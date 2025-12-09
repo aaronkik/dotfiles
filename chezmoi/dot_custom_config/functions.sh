@@ -36,6 +36,15 @@ _gcmp () {
     git push
 }
 
+# Git Worktree
+gwt() {
+  local branch=$1
+  local base=${2:-origin/main}
+  local repo=$(basename $(git rev-parse --show-toplevel))
+  git worktree add -b $branch ../${repo}-${branch} $base
+}
+
+
 # Copied from Gary Bernhardt (destroyallsoftware.com) dot files repository.
 #
 # Log output:
