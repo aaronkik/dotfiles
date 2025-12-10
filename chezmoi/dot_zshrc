@@ -47,7 +47,7 @@ source "$HOME/custom_plugins/fzf-tab/fzf-tab.plugin.zsh"
 export PATH=$PATH:$HOME/go/bin
 
 export SST_STAGE=aaron
-export NODE_ENV=production
+# export NODE_ENV=production
 
 eval "$(mise activate zsh)"
 
