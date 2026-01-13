@@ -178,5 +178,8 @@
     "deny": [],
     "defaultMode": "acceptEdits"
   },
-  "alwaysThinkingEnabled": true
+  "alwaysThinkingEnabled": true,
+  "enabledPlugins": {
+    "typescript-lsp@claude-plugins-official": true
+  }
 }
