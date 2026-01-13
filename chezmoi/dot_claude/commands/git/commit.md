@@ -31,6 +31,8 @@ The format of the conventional commit should be as follows:
 
 Avoid the need to provide a body/footer unless it would provide further context to a reader.
 
+Once the commit has been created, ask me if I would like to push the commit to the remote repository.
+
 ### Type
 
 Commits MUST be prefixed with a type, followed by the optional scope, optional !, and required terminal colon and space.
