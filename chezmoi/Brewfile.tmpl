@@ -54,6 +54,7 @@ cask "cleanshot"
 cask "comet"
 cask "cyberduck"
 cask "ghostty"
+cask "glide"
 cask "google-chrome"
 cask "jetbrains-toolbox"
 cask "karabiner-elements"
@@ -85,6 +86,13 @@ cask "vlc"
 
 # Cask - Apps - Work Computer
 {{ if eq .isWorkComputer true -}}
+# https://github.com/fougue/mayo/wiki/Build-instructions-for-macOS
+brew "cmake"
+brew "qt@5"
+brew "opencascade"
+brew "assimp"
+
+cask "session-manager-plugin"
 cask "slack"
 cask "miro"
 {{ end -}}
