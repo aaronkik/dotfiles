@@ -1,3 +1,5 @@
 export PATH="$PATH:/Users/$USER/Library/Application Support/JetBrains/Toolbox/scripts"
 
+if command -v wt >/dev/null 2>&1; then eval "$(command wt config shell init bash)"; fi
+
 eval "$(starship init bash)"
