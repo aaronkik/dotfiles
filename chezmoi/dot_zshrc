@@ -46,7 +46,11 @@ source "$HOME/custom_plugins/fzf-tab/fzf-tab.plugin.zsh"
 # Support Go binaries
 export PATH=$PATH:$HOME/go/bin
 
+# Cursor CLI
+export PATH="$HOME/.local/bin:$PATH"
+
 export SST_STAGE=aaron
+export NX_TUI=false
 # export NODE_ENV=production
 
 if command -v wt >/dev/null 2>&1; then eval "$(command wt config shell init zsh)"; fi
