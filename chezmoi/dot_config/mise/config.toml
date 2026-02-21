@@ -5,4 +5,5 @@ node = 'lts'
 
 trusted_config_paths = [
   '~/development',
+  '~/.local/share/chezmoi'
 ]
