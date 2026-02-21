@@ -16,6 +16,7 @@ defaults write com.apple.controlcenter NSStatusItem-Visible-Battery -float 1
 defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock autohide-delay -float 0
 defaults write com.apple.dock autohide-time-modifier -float 0
+defaults write com.apple.dock mru-spaces -bool false
 
 defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.finder FXRemoveOldTrashItems -float 1
@@ -76,3 +77,5 @@ done
 defaults write com.apple.Terminal "Default Window Settings" -string "catppuccin-frappe"
 defaults write com.apple.Terminal "Startup Window Settings" -string "catppuccin-frappe"
 
+# Restart the dock process
+killall Dock
