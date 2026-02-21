@@ -1,0 +1,11 @@
+[settings]
+animate = false
+default_keys = true
+
+[settings.experimental]
+
+# Show the current space index on the status icon.
+status_icon.space_index = true
+
+# Use color in the icon.
+status_icon.color = true
