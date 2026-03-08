@@ -1,11 +1,6 @@
 {{- $workServers := dict -}}
 {{- if eq .isWorkComputer true -}}
   {{- $workServers = dict
-    "circleci-mcp-server" (dict
-      "args" (list "-y" "@circleci/mcp-server-circleci")
-      "command" "npx"
-      "env" (dict "CIRCLECI_TOKEN" "")
-    )
     "nx-mcp" (dict
       "args" (list "nx-mcp@latest")
       "command" "npx"
