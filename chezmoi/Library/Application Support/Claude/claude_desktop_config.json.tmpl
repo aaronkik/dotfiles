@@ -94,8 +94,11 @@
   dict
     "mcpServers" (merge $baseServers $workServers)
     "preferences" (dict
+      "coworkScheduledTasksEnabled" true
+      "coworkWebSearchEnabled" true
       "menuBarEnabled" false
       "quickEntryShortcut" "off"
+      "sidebarMode" "chat"
     )
   | toPrettyJson
 }}
