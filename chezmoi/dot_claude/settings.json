@@ -179,7 +179,7 @@
       "Write"
     ],
     "deny": [],
-    "defaultMode": "bypassPermissions"
+    "defaultMode": "acceptEdits"
   },
   "alwaysThinkingEnabled": true,
   "model": "opus",
