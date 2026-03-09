@@ -29,9 +29,20 @@ JSON=$(cat)
 fmt_tokens() {
   local n=${1:-0}
   if [[ $n -ge 1000000 ]]; then
-    printf '%.1fM' "$(echo "$n / 1000000" | bc -l)"
+    printf '%.2fM' "$(echo "$n / 1000000" | bc -l)"
   elif [[ $n -ge 1000 ]]; then
-    printf '%.1fK' "$(echo "$n / 1000" | bc -l)"
+    printf '%.2fK' "$(echo "$n / 1000" | bc -l)"
+  else
+    printf '%d' "$n"
+  fi
+}
+
+fmt_tokens_whole() {
+  local n=${1:-0}
+  if [[ $n -ge 1000000 ]]; then
+    printf '%dM' "$((n / 1000000))"
+  elif [[ $n -ge 1000 ]]; then
+    printf '%dK' "$((n / 1000))"
   else
     printf '%d' "$n"
   fi
@@ -122,6 +133,7 @@ load_git_info
 eval "$(echo "$JSON" | jq -r '
   @sh "model_name=\(.model.display_name // "Unknown")",
   @sh "version=\(.version // "?")",
+  @sh "ctx_pct_raw=\(.context_window.used_percentage // 0)",
   @sh "ctx_pct=\(.context_window.used_percentage // 0 | floor)",
   @sh "ctx_max=\(.context_window.context_window_size // 200000)",
   @sh "total_duration=\(.cost.total_duration_ms // 0)",
@@ -196,10 +208,10 @@ printf '\n'
 printf '%b' "$ctx_line"
 
 # --- Token stats line ---
-context_tokens=$((ctx_max * ctx_pct / 100))
+context_tokens=$(echo "$ctx_max * $ctx_pct_raw / 100" | bc | cut -d. -f1)
 tok_line="${C_TEXT}\xce\xa3 $(fmt_tokens "$context_tokens")${C_RESET}"
 tok_line+="${SEP}${C_SKY}\xef\x85\xb6 $(fmt_tokens "$input_tokens")${C_RESET}"
 tok_line+="${SEP}${C_MAROON}\xef\x85\xb5 $(fmt_tokens "$output_tokens")${C_RESET}"
-tok_line+="${SEP}${C_TEAL}\xf0\x9f\xa7\xa0 $(fmt_tokens "$ctx_max")${C_RESET}"
+tok_line+="${SEP}${C_TEAL}\xf0\x9f\xa7\xa0 $(fmt_tokens_whole "$ctx_max")${C_RESET}"
 printf '\n'
 printf '%b' "$tok_line"
