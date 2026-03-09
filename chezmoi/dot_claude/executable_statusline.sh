@@ -200,6 +200,6 @@ context_tokens=$((ctx_max * ctx_pct / 100))
 tok_line="${C_TEXT}\xce\xa3 $(fmt_tokens "$context_tokens")${C_RESET}"
 tok_line+="${SEP}${C_SKY}\xef\x85\xb6 $(fmt_tokens "$input_tokens")${C_RESET}"
 tok_line+="${SEP}${C_MAROON}\xef\x85\xb5 $(fmt_tokens "$output_tokens")${C_RESET}"
-tok_line+="${SEP}${C_TEAL}󰒔 $(fmt_tokens "$ctx_max")${C_RESET}"
+tok_line+="${SEP}${C_TEAL}\xf0\x9f\xa7\xa0 $(fmt_tokens "$ctx_max")${C_RESET}"
 printf '\n'
 printf '%b' "$tok_line"
