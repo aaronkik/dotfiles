@@ -51,6 +51,11 @@
     "deny": [],
     "defaultMode": "acceptEdits"
   },
+  "statusLine": {
+    "type": "command",
+    "command": "$HOME/.claude/statusline.sh",
+    "padding": 1
+  },
   "alwaysThinkingEnabled": true,
   "model": "opus",
   "enabledPlugins": {
