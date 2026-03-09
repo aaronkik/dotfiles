@@ -56,7 +56,6 @@
     "command": "$HOME/.claude/statusline.sh",
     "padding": 1
   },
-  "showTokenCount": false,
   "alwaysThinkingEnabled": true,
   "model": "opus",
   "enabledPlugins": {
