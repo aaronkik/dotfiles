@@ -1,4 +1,5 @@
 alias c=clear
+alias cc=claude
 alias epoch='date +%s'
 alias iso='epoch | jq --raw-output todate | pbcopy'
 alias l=eza
@@ -16,10 +17,16 @@ alias uuid='uuidgen | tr -d "\n" | tr "[:upper:]" "[:lower:]" | pbcopy'
 alias cat=bat
 alias bup='brew update && brew upgrade'
 
+# Chezmoi
 alias chap='chezmoi apply'
 alias chup='chezmoi upgrade && chezmoi update'
 
-# Git aliases
+# Worktrunk
+alias wsc='wt switch --create'
+alias wscc='wt switch --create --execute=claude'
+alias wr='wt remove -D'
+
+# Git
 alias sw='git switch'
 alias swc='git switch --create'
 alias gr='git restore'
