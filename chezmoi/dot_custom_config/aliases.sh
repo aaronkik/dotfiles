@@ -16,6 +16,9 @@ alias uuid='uuidgen | tr -d "\n" | tr "[:upper:]" "[:lower:]" | pbcopy'
 alias cat=bat
 alias bup='brew update && brew upgrade'
 
+alias chap='chezmoi apply'
+alias chup='chezmoi upgrade && chezmoi update'
+
 # Git aliases
 alias sw='git switch'
 alias swc='git switch --create'
