@@ -14,6 +14,7 @@ alias to_string='pbpaste | jq --raw-output tostring | pbcopy'
 alias ide='goland nosplash'
 alias uuid='uuidgen | tr -d "\n" | tr "[:upper:]" "[:lower:]" | pbcopy'
 alias cat=bat
+alias bup='brew update && brew upgrade'
 
 # Git aliases
 alias sw='git switch'
