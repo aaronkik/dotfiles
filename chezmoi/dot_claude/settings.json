@@ -7,19 +7,24 @@
   "env": {
     "DISABLE_TELEMETRY": "1"
   },
+  "cleanupPeriodDays": 60,
   "permissions": {
     "allow": [
-      "Bash(aws sts:*)",
-      "Bash(find:*)",
-      "Bash(git *)",
-      "Bash(gh *)",
-      "Bash(ls:*)",
-      "Bash(chezmoi *)",
+      "Agent",
+      "Bash",
+      "Bash(aws sts *)",
+      "Bash(find*)",
+      "Bash(git*)",
+      "Bash(gh*)",
+      "Bash(ls*)",
+      "Bash(chezmoi*)",
       "Bash(npm run *)",
       "Edit",
+      "ExitPlanMode",
       "Glob",
       "Grep",
-      "LS",
+      "KillShell",
+      "LSP",
       "mcp__awslabs_aws-documentation-mcp",
       "mcp__awslabs-dynamodb-mcp-server__list*",
       "mcp__awslabs-dynamodb-mcp-server__describe*",
@@ -37,20 +42,25 @@
       "mcp__Context7",
       "mcp__github",
       "mcp__knip",
-      "MultiEdit",
       "NotebookEdit",
-      "NotebookRead",
       "Read",
       "Skill",
-      "Task",
+      "TaskCreate",
+      "TaskGet",
+      "TaskList",
+      "TaskOutput",
+      "TaskStop",
+      "TaskUpdate",
       "TodoWrite",
+      "ToolSearch",
       "WebFetch",
       "WebSearch",
       "Write"
     ],
     "deny": [],
-    "defaultMode": "acceptEdits"
+    "defaultMode": "bypassPermissions"
   },
+  "skipAutoPermissionPrompt": true,
   "statusLine": {
     "type": "command",
     "command": "$HOME/.claude/statusline.sh",
@@ -59,11 +69,19 @@
   "alwaysThinkingEnabled": true,
   "model": "opus",
   "enabledPlugins": {
+    "caveman@caveman": true,
     "code-simplifier@claude-plugins-official": true,
     "typescript-lsp@claude-plugins-official": true,
     "worktrunk@worktrunk": true
   },
+  "autoMemoryEnabled": false,
   "extraKnownMarketplaces": {
+    "caveman": {
+      "source": {
+        "source": "github",
+        "repo": "JuliusBrussee/caveman"
+      }
+    },
     "claude-plugins-official": {
       "source": {
         "source": "github",
