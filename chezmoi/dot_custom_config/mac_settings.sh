@@ -33,6 +33,10 @@ defaults write NSGlobalDomain AppleEnableSwipeNavigateWithScrolls -bool true
 # Enable keyboard navigation: Settings -> Keyboard -> Keyboard navigation
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 2
 
+# Repeat settings for faster typing.
+defaults write -g KeyRepeat -int 2
+defaults write -g InitialKeyRepeat -int 30
+
 # Use FN keys as standard keys
 defaults write NSGlobalDomain com.apple.keyboard.fnState -bool true
 
