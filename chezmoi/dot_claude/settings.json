@@ -60,7 +60,6 @@
     "deny": [],
     "defaultMode": "bypassPermissions"
   },
-  "skipAutoPermissionPrompt": true,
   "statusLine": {
     "type": "command",
     "command": "$HOME/.claude/statusline.sh",
