@@ -11,7 +11,6 @@ brew "eza"
 brew "fd"
 brew "ffmpeg"
 brew "fzf"
-brew "gemini-cli"
 brew "gh"
 brew "go"
 brew "gopls" # For Claude LSP
@@ -49,14 +48,13 @@ brew "remotemobprogramming/brew/mob"
 {{ end -}}
 
 # Cask - Apps
-cask "blender"
 cask "claude"
 cask "claude-code"
 cask "cleanshot"
 cask "cyberduck"
 cask "ghostty"
-cask "google-chrome"
 cask "helium-browser"
+cask "insomnia"
 cask "jetbrains-toolbox"
 cask "karabiner-elements"
 cask "logi-options+"
@@ -66,6 +64,7 @@ cask "raycast"
 cask "remnote"
 # cask "runjs"
 cask "spotify"
+cask "slack"
 cask "stats"
 cask "visual-studio-code"
 
@@ -73,8 +72,6 @@ cask "visual-studio-code"
 {{ if eq .isPersonalComputer true -}}
 cask "cryptomator"
 # cask "exifcleaner"
-cask "macfuse"
-cask "fuse-t"
 cask "jellyfin-media-player"
 cask "microsoft-teams"
 cask "protonvpn"
@@ -87,17 +84,7 @@ cask "vlc"
 
 # Cask - Apps - Work Computer
 {{ if eq .isWorkComputer true -}}
-# https://github.com/fougue/mayo/wiki/Build-instructions-for-macOS
-brew "cmake"
-brew "qt@5"
-brew "opencascade"
-brew "assimp"
 
-cask "insomnia"
-cask "postman"
-cask "session-manager-plugin"
-cask "slack"
-cask "miro"
 {{ end -}}
 
 # Cask - Fonts
