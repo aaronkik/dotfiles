@@ -69,11 +69,11 @@
     "args" (list "-y" "@knip/mcp")
     "command" "npx"
   )
-   "eslint" (dict
+  "eslint" (dict
      "args" (list "@eslint/mcp@latest")
      "command" "npx"
      "env" (dict)
-   )
+  )
   "chrome-devtools" (dict
     "args" (list "chrome-devtools-mcp@latest")
     "command" "npx"
@@ -87,6 +87,10 @@
       "FASTMCP_LOG_LEVEL" "ERROR"
       "AWS_DOCUMENTATION_PARTITION" "aws"
     )
+  )
+  "pulumi" (dict
+    "args" (list "-y" "mcp-remote" "https://mcp.ai.pulumi.com/mcp")
+    "command" "npx"
   )
 -}}
 
