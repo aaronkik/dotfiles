@@ -21,13 +21,6 @@
     "disabled" false
     "env" (dict "FASTMCP_LOG_LEVEL" "ERROR")
   )
-  "awslabs-cdk-mcp-server" (dict
-    "args" (list "awslabs.cdk-mcp-server@latest")
-    "autoApprove" (list)
-    "command" "uvx"
-    "disabled" false
-    "env" (dict "FASTMCP_LOG_LEVEL" "ERROR")
-  )
   "awslabs-cost-explorer-mcp-server" (dict
     "args" (list "awslabs.cost-explorer-mcp-server@latest")
     "autoApprove" (list)
@@ -53,13 +46,6 @@
   "awslabs-s3-tables-mcp-server" (dict
     "args" (list "awslabs.s3-tables-mcp-server@latest")
     "command" "uvx"
-  )
-  "awslabs-aws-pricing-mcp-server" (dict
-    "args" (list "awslabs.aws-pricing-mcp-server@latest")
-    "autoApprove" (list)
-    "command" "uvx"
-    "disabled" false
-    "env" (dict "FASTMCP_LOG_LEVEL" "ERROR")
   )
   "Context7" (dict
     "args" (list "-y" "@upstash/context7-mcp")
