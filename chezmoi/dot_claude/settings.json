@@ -40,6 +40,7 @@
       "mcp__awslabs-cloudwatch-mcp-server__get*",
       "mcp__awslabs-cost-explorer-mcp-server",
       "mcp__Context7",
+      "mcp__chrome-devtools__*",
       "mcp__github",
       "mcp__knip",
       "NotebookEdit",
