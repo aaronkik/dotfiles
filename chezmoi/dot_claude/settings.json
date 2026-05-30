@@ -67,7 +67,9 @@
     "padding": 1
   },
   "alwaysThinkingEnabled": true,
-  "model": "opus",
+  "model": "sonnet[1m]",
+  "effortLevel": "xhigh",
+  "skipDangerousModePermissionPrompt": true,
   "enabledPlugins": {
     "caveman@caveman": true,
     "code-simplifier@claude-plugins-official": true,
