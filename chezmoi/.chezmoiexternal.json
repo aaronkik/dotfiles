@@ -1,0 +1,29 @@
+{
+  ".agents/skills/tdd": {
+    "type": "archive",
+    "url": "https://api.github.com/repos/mattpocock/skills/tarball",
+    "refreshPeriod": "72h",
+    "stripComponents": 4,
+    "include": [
+      "**/skills/engineering/tdd/**"
+    ]
+  },
+  ".agents/skills/grill-me": {
+    "type": "archive",
+    "url": "https://api.github.com/repos/mattpocock/skills/tarball",
+    "refreshPeriod": "72h",
+    "stripComponents": 4,
+    "include": [
+      "**/skills/productivity/grill-me/**"
+    ]
+  },
+  ".agents/skills/grilling": {
+    "type": "archive",
+    "url": "https://api.github.com/repos/mattpocock/skills/tarball",
+    "refreshPeriod": "72h",
+    "stripComponents": 4,
+    "include": [
+      "**/skills/productivity/grilling/**"
+    ]
+  }
+}
