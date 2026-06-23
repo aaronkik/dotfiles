@@ -1,8 +1,10 @@
 ---
 name: conventional-commit
 description: >
-  Ultra-compressed commit message generator. Cuts noise from commit messages while preserving intent and reasoning.
+  Ultra-compressed commit message generator.
+  Cuts noise from commit messages while preserving intent and reasoning.
   Conventional Commits format. Subject ≤50 chars, body only when "why" isn't obvious.
+  Use when creating commits.
 allowed-tools: Bash(git *) Bash(gh *)
 ---
 
