@@ -1,0 +1,11 @@
+{
+  ".agents/skills/skill-creator": {
+    "type": "archive",
+    "url": "https://api.github.com/repos/anthropics/skills/tarball",
+    "refreshPeriod": "168h",
+    "stripComponents": 3,
+    "include": [
+      "**/skills/skill-creator/**"
+    ]
+  }
+}
