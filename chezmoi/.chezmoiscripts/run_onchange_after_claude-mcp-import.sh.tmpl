@@ -1,0 +1,13 @@
+#!/bin/sh
+{{ if eq .chezmoi.os "darwin" -}}
+
+# Re-import Claude Desktop MCP servers into Claude Code (user scope)
+# whenever the desktop config changes. The hash below pins this script to
+# the source template, so editing the server list retriggers the import.
+# desktop config hash: {{ include "Library/Application Support/Claude/modify_claude_desktop_config.json" | sha256sum }}
+
+if command -v claude >/dev/null 2>&1; then
+  claude mcp add-from-claude-desktop --scope user
+fi
+
+{{ end -}}
