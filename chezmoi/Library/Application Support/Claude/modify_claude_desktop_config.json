@@ -1,3 +1,4 @@
+{{- /* chezmoi:modify-template */ -}}
 {{- $workServers := dict -}}
 {{- if eq .isWorkComputer true -}}
   {{- $workServers = dict
@@ -48,11 +49,6 @@
     "args" (list "-y" "@knip/mcp")
     "command" "npx"
   )
-  "eslint" (dict
-     "args" (list "@eslint/mcp@latest")
-     "command" "npx"
-     "env" (dict)
-  )
   "chrome-devtools" (dict
     "args" (list "chrome-devtools-mcp@latest")
     "command" "npx"
@@ -77,16 +73,12 @@
   )
 -}}
 
-{{
-  dict
-    "mcpServers" (merge $baseServers $workServers)
-    "preferences" (dict
-      "ccdScheduledTasksEnabled" true
-      "coworkScheduledTasksEnabled" true
-      "coworkWebSearchEnabled" true
-      "menuBarEnabled" false
-      "quickEntryShortcut" "off"
-      "sidebarMode" "chat"
-    )
-  | toPrettyJson
-}}
+{{- /* Start from existing file so unmanaged keys (preferences, coworkUserFilesPath) survive */ -}}
+{{- $config := dict -}}
+{{- if hasKey .chezmoi "stdin" -}}
+{{-   if .chezmoi.stdin -}}
+{{-     $config = fromJson .chezmoi.stdin -}}
+{{-   end -}}
+{{- end -}}
+{{- $_ := set $config "mcpServers" (merge $baseServers $workServers) -}}
+{{ $config | toPrettyJson }}
