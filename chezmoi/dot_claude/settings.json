@@ -75,7 +75,10 @@
     "code-simplifier@claude-plugins-official": true,
     "typescript-lsp@claude-plugins-official": true,
     "worktrunk@worktrunk": true,
-    "gopls-lsp@claude-plugins-official": true
+    "gopls-lsp@claude-plugins-official": true,
+    "aws-core@agent-toolkit-for-aws": true,
+    "aws-agents@agent-toolkit-for-aws": true,
+    "aws-agents-for-devsecops@agent-toolkit-for-aws": true
   },
   "autoMemoryEnabled": false,
   "extraKnownMarketplaces": {
@@ -95,6 +98,12 @@
       "source": {
         "source": "github",
         "repo": "max-sixty/worktrunk"
+      }
+    },
+    "agent-toolkit-for-aws": {
+      "source": {
+        "source": "github",
+        "repo": "aws/agent-toolkit-for-aws"
       }
     }
   }
