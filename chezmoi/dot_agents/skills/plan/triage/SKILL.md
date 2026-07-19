@@ -4,6 +4,8 @@ description: Move issues and external PRs through a state machine of triage role
 disable-model-invocation: true
 ---
 
+<!-- vendored: mattpocock/skills@9603c1c skills/engineering/triage | local: namespaced skill refs; /setup-matt-pocock-skills stripped -->
+
 # Triage
 
 Move issues on the project issue tracker through a small state machine of triage roles.

@@ -1,12 +1,14 @@
 ---
 name: implement
-description: "Implement a piece of work based on a PRD or set of issues."
+description: "Implement a piece of work based on a spec or set of tickets."
 disable-model-invocation: true
 ---
 
-Implement the work described by the user in the PRD or issues.
+<!-- vendored: mattpocock/skills@9603c1c skills/engineering/implement | local: namespaced skill refs; /code-review → /review -->
 
-Use /tdd where possible, at pre-agreed seams.
+Implement the work described by the user in the spec or tickets.
+
+Use /build:tdd where possible, at pre-agreed seams.
 
 Run typechecking regularly, single test files regularly, and the full test suite once at the end.
 
