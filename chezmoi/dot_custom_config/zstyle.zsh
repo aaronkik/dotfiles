@@ -14,3 +14,5 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always --icons=alway
 zstyle ':fzf-tab:*' switch-group '<' '>'
 # tmux
 zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
+# Wrap any text that exceeds the terminal
+zstyle ':fzf-tab:*' fzf-flags --wrap
