@@ -12,7 +12,10 @@ fi
 echo "\033[32mBrewfile template updated!\033[m"
 
 echo "\033[33mRunning 'brew trust'\033[m"
-brew trust common-fate/granted manaflow-ai/cmux
+brew trust \
+common-fate/granted \
+manaflow-ai/cmux \
+abue-ammar/tinycast
 
 echo "\033[33mRunning 'brew bundle'\033[m"
 brew bundle --file=$HOME/Brewfile

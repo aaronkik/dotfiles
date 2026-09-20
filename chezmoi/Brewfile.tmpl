@@ -1,4 +1,5 @@
 {{- if eq .chezmoi.os "darwin" -}}
+tap "abue-ammar/tinycast"
 tap "common-fate/granted"
 tap "manaflow-ai/cmux"
 
@@ -48,6 +49,7 @@ brew "dotnet"
 {{ end -}}
 
 # Cask - Apps
+cask "abue-ammar/tinycast/tinycast"
 cask "chatgpt"
 cask "claude"
 cask "claude-code@latest"
