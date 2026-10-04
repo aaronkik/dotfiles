@@ -69,27 +69,26 @@ cask "orbstack"
 cask "remnote"
 cask "spotify"
 cask "stats"
+cask "tailscale-app"
 cask "visual-studio-code"
 
 # Cask - Apps - Personal Computer
 {{ if eq .isPersonalComputer true -}}
 cask "cryptomator"
-cask "exifcleaner"
 cask "jellyfin-media-player"
 cask "microsoft-teams"
 cask "protonvpn"
 cask "proton-pass"
 cask "spotify"
 cask "steam"
-cask "tailscale-app"
 cask "transmission"
 cask "vlc"
 {{ end -}}
 
 # Cask - Apps - Work Computer
 {{ if eq .isWorkComputer true -}}
+cask "1password"
 cask "clickup"
-cask "tailscale-app"
 {{ end -}}
 
 # Cask - Fonts
