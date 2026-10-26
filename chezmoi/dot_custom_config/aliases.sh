@@ -1,5 +1,6 @@
 alias c=clear
 alias cc=claude
+alias ccw='CLAUDE_CONFIG_DIR=~/.claude-work claude'
 alias epoch='date +%s'
 alias iso='epoch | jq --raw-output todate | pbcopy'
 alias l=eza
