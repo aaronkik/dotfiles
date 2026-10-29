@@ -15,6 +15,10 @@ Evidence sections when there is nothing to include. Attach relevant supplied
 artifacts through the ClickUp MCP and include supplied links in Context or
 Evidence. A filename or local path in the body does not replace an attachment.
 
+If it is an observed behaviour with a flow of an application then it should be
+written for a less technical audience, for example don't including git commits
+and code snippets unless explicitly asked. Any verbosity should be removed.
+
 ```markdown
 # <Expanded description of the problem>
 
