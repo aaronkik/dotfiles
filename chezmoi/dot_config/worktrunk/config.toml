@@ -2,4 +2,4 @@
 copy = "wt step copy-ignored"
 
 [step.copy-ignored]
-exclude = [".cache/", ".turbo/"]
+exclude = [".cache/", ".turbo/", ".next/", "cdk.out"]
