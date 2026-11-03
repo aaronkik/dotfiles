@@ -16,7 +16,6 @@ alias to_string='pbpaste | jq --raw-output tostring | pbcopy'
 alias ide='goland nosplash'
 alias uuid='uuidgen | tr -d "\n" | tr "[:upper:]" "[:lower:]" | pbcopy'
 alias cat=bat
-alias bup='brew trust abue-ammar/tinycast anomalyco/tap common-fate/granted manaflow-ai/cmux && brew update && brew upgrade --yes'
 
 # Chezmoi
 alias chap='chezmoi apply'
