@@ -20,6 +20,22 @@ bup() {
     brew trust "${taps[@]}" && brew update && brew upgrade --yes
 }
 
+eod() {
+    local apps=(
+        "1Password"
+        "ClickUp"
+        "Microsoft Teams"
+        "Tailscale"
+    )
+    for app in "${apps[@]}"; do
+        if ! osascript -e "id of application \"$app\"" &>/dev/null; then
+            echo "eod: $app not found, skipping" >&2
+            continue
+        fi
+        osascript -e "if application \"$app\" is running then tell application \"$app\" to quit"
+    done
+}
+
 ################################################################################
 # GIT FUNCTIONS ################################################################
 ################################################################################
