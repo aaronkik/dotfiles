@@ -1,7 +1,8 @@
 {{- if eq .chezmoi.os "darwin" -}}
-tap "abue-ammar/tinycast"
-tap "common-fate/granted"
-tap "manaflow-ai/cmux"
+tap "abue-ammar/tinycast", trusted: true
+tap "anomalyco/tap", trusted: true
+tap "common-fate/granted", trusted: true
+tap "manaflow-ai/cmux", trusted: true
 
 brew "adr-tools"
 brew "awscli"
@@ -42,6 +43,8 @@ brew "zoxide"
 brew "zsh-syntax-highlighting"
 
 {{ if eq .isWorkComputer true -}}
+tap "getsentry/tools", trusted: true
+
 brew "dotnet"
 brew "postgresql@17"
 brew "getsentry/tools/sentry"
