@@ -15,6 +15,7 @@ bup() {
         anomalyco/tap
         common-fate/granted
         manaflow-ai/cmux
+        getsentry/tools
     )
     brew trust "${taps[@]}" && brew update && brew upgrade --yes
 }
