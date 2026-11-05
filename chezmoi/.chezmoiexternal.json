@@ -11,6 +11,7 @@
   },
   ".agents/skills/skill-creator": {
     "type": "archive",
+    "exact": true,
     "url": "https://api.github.com/repos/anthropics/skills/tarball",
     "refreshPeriod": "168h",
     "stripComponents": 3,
