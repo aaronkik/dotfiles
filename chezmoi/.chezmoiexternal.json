@@ -1,4 +1,14 @@
 {
+  ".agents/skills/security-audit": {
+    "type": "archive",
+    "exact": true,
+    "url": "https://api.github.com/repos/cloudflare/security-audit-skill/tarball",
+    "refreshPeriod": "168h",
+    "stripComponents": 3,
+    "include": [
+      "**/skills/security-audit/**"
+    ]
+  },
   ".agents/skills/skill-creator": {
     "type": "archive",
     "url": "https://api.github.com/repos/anthropics/skills/tarball",
