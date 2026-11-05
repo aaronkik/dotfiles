@@ -9,17 +9,6 @@ source_if_exists () {
     fi
 }
 
-bup() {
-    local taps=(
-        abue-ammar/tinycast
-        anomalyco/tap
-        common-fate/granted
-        getsentry/tools
-        manaflow-ai/cmux
-    )
-    brew trust "${taps[@]}" && brew update && brew upgrade --yes
-}
-
 eod() {
     local apps=(
         "1Password"
