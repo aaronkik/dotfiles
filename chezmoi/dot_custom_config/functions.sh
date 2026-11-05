@@ -14,8 +14,8 @@ bup() {
         abue-ammar/tinycast
         anomalyco/tap
         common-fate/granted
-        manaflow-ai/cmux
         getsentry/tools
+        manaflow-ai/cmux
     )
     brew trust "${taps[@]}" && brew update && brew upgrade --yes
 }
