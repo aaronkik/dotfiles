@@ -30,10 +30,8 @@ specific checks; omit them when the scenario is sufficient.
 
 ### AC1 - <Short description>
 
-**Given** <Starting situation>
-
-**When** <User action or event>
-
+**Given** <Starting situation>\
+**When** <User action or event>\
 **Then** <Observable product outcome>
 
 - <Optional specific thing to check>
