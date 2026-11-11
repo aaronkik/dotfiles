@@ -45,7 +45,7 @@ and code snippets unless explicitly asked. Any verbosity should be removed.
 
 <Known affected environment, device, browser, or version.>
 
-## Evidence
+## Supporting links and attachments
 
 <Supplied evidence links and descriptions of attached artifacts.>
 ```
