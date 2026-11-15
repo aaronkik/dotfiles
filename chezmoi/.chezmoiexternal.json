@@ -1,4 +1,14 @@
 {
+  ".agents/skills/container": {
+    "type": "archive",
+    "exact": true,
+    "url": "https://api.github.com/repos/apple/container/tarball",
+    "refreshPeriod": "168h",
+    "stripComponents": 3,
+    "include": [
+      "**/skills/container/**"
+    ]
+  },
   ".agents/skills/gh-stack": {
     "type": "archive",
     "exact": true,
