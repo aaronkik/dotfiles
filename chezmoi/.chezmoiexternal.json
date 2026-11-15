@@ -9,6 +9,16 @@
       "**/skills/container/**"
     ]
   },
+  ".agents/skills/gh-actions-lock": {
+    "type": "archive",
+    "exact": true,
+    "url": "https://api.github.com/repos/github/gh-actions-lock/tarball",
+    "refreshPeriod": "168h",
+    "stripComponents": 3,
+    "include": [
+      "**/skills/gh-actions-lock/**"
+    ]
+  },
   ".agents/skills/gh-stack": {
     "type": "archive",
     "exact": true,
