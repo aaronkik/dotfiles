@@ -65,9 +65,9 @@ du -shc <path> [<path> ...]
 `du` abbreviates units as `K`, `M` and `G`. Write them out as KB, MB and GB whenever you show a size to the user,
 for example "5.7 MB" rather than "5.7M".
 
-For a sweep, show the safe worktrees you will remove with their sizes, and the unsafe ones you will keep (with
-reasons), then get a yes first. Glancing at a bulk deletion beforehand is cheap. A single worktree the user asked for by name, or the
-current one, can go straight away once it is safe.
+Remove the safe targets straight away, together with every other worktree that step 1 marked `safe`, so finished
+worktrees outside the current one are cleared in the same run. Step 1 already proved their work is on the remote, so
+no confirmation is needed. Unsafe worktrees stay in place and go in the report.
 
 ```bash
 cd "<main_worktree>" && wt remove --foreground --format=json -D <branch> [<branch> ...]
@@ -88,5 +88,3 @@ Keep it short: each removed worktree with its branch, size and `branch_outcome`,
 kept worktree with the reason. Only count worktrees that were actually removed towards the total.
 If the session's own worktree was removed, say its directory is gone and give the main worktree path to continue
 from.
-
-If there are safe worktrees to remove out of the context of the current worktree, remove it.
