@@ -19,3 +19,4 @@
 - Write in plain, complete sentences.
 - Don't use clipped contrasts such as "X, never Y", "X, not Y" or "not X but Y". Say what happens in an ordinary
   sentence instead.
+- If you come across sentences with this style, update them.
