@@ -1,5 +1,4 @@
 {{- if eq .chezmoi.os "darwin" -}}
-tap "abue-ammar/tinycast", trusted: true
 tap "anomalyco/tap", trusted: true
 tap "common-fate/granted", trusted: true
 
@@ -52,7 +51,7 @@ brew "getsentry/tools/sentry"
 {{ end -}}
 
 # Cask - Apps
-cask "abue-ammar/tinycast/tinycast"
+cask "tinycast"
 cask "anomalyco/tap/hex"
 cask "chatgpt"
 cask "claude"
