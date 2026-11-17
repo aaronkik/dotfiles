@@ -88,3 +88,5 @@ Keep it short: each removed worktree with its branch, size and `branch_outcome`,
 kept worktree with the reason. Only count worktrees that were actually removed towards the total.
 If the session's own worktree was removed, say its directory is gone and give the main worktree path to continue
 from.
+
+If there are safe worktrees to remove out of the context of the current worktree, remove it.
