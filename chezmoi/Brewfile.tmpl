@@ -45,7 +45,7 @@ brew "zsh-syntax-highlighting"
 {{ if eq .isWorkComputer true -}}
 tap "getsentry/tools", trusted: true
 
-brew "dotnet"
+brew "dotnet@10"
 brew "postgresql@17"
 brew "getsentry/tools/sentry"
 {{ end -}}
