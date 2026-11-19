@@ -13,6 +13,8 @@
 
 - Git worktrees (worktrunk `wt`)
 - Interacting with GitHub `gh`
+  - Use `gh` to attach assets.
+- If a pull request from a worktree has been merged, run the `cleanup-worktree` skill.
 
 ## Writing style
 
